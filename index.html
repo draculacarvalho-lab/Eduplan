@@ -97,6 +97,20 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 1px var(--primary);
         }
+
+        [contenteditable]:empty:before {
+            content: attr(data-placeholder);
+            color: #94a3b8;
+            pointer-events: none;
+            display: block;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        .animate-shake { animation: shake 0.5s ease-in-out infinite; }
     </style>
 
 <link rel="stylesheet" href="/index.css">
@@ -109,11 +123,12 @@
     "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
     "jspdf": "https://esm.sh/jspdf@^3.0.4",
     "docx": "https://esm.sh/docx@^9.5.1",
-    "pptxgenjs": "https://esm.sh/pptxgenjs@^4.0.1"
+    "pptxgenjs": "https://esm.sh/pptxgenjs@^4.0.1",
+    "html-to-image": "https://esm.sh/html-to-image@^1.11.11"
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-DVIjE-sC.js"></script>
+  <script type="module" crossorigin src="/assets/index-CqfeeOqs.js"></script>
 </head>
 <body class="antialiased selection:bg-slate-200 selection:text-slate-900">
     <div class="aurora-bg"></div>
