@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EduPlan BNCC | Inteligência Pedagógica Pro</title>
+    <title>EduPlan Ultra | IA Nível GPT-4 para BNCC</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="O assistente de IA definitivo para professores brasileiros. Gere planos de aula e currículos alinhados à BNCC em segundos.">
-    <meta name="keywords" content="BNCC, professor, plano de aula, educação, inteligência artificial, word, pdf, slides, escola brasil">
+    <meta name="description" content="O assistente de IA pedagógica mais potente do mercado. Agora com motor de raciocínio nível GPT-4, 100% gratuito para professores.">
+    <meta name="keywords" content="BNCC, professor, plano de aula, GPT-4 grátis, inteligência artificial, educação, word, pdf, slides">
     
     <!-- Social Media Meta Tags (Open Graph) -->
-    <meta property="og:title" content="EduPlan BNCC - Planos de Aula Inteligentes">
-    <meta property="og:description" content="A ferramenta definitiva para professores. Gere planos de aula completos e instaláveis em qualquer dispositivo.">
+    <meta property="og:title" content="EduPlan Ultra - Inteligência Superior para Professores">
+    <meta property="og:description" content="Gere planos de aula magistrais com IA de raciocínio profundo. 100% alinhado à BNCC 2025.">
     <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3429/3429149.png">
     <meta property="og:type" content="website">
 
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#020617">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="EduPlan Pro">
+    <meta name="apple-mobile-web-app-title" content="EduPlan Ultra">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3429/3429149.png">
     <link rel="manifest" href="/assets/manifest-CsVI5ZUK.json">
 
@@ -28,11 +28,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --primary-light: #1e293b;
-            --accent: #b45309;
-            --primary-glow: rgba(15, 23, 42, 0.05);
-            --bg-pearl: #fdfbf7;
+            --primary: #020617;
+            --primary-light: #0f172a;
+            --accent: #f59e0b;
+            --bg-pearl: #f8fafc;
         }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -49,32 +48,41 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at 20% 20%, rgba(203, 213, 225, 0.15) 0%, transparent 40%),
-                        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 40%);
+            background: radial-gradient(circle at 10% 10%, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
             background-color: var(--bg-pearl);
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(226, 232, 240, 0.5);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
         
         .card-shadow {
-            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 8px -1px rgba(15, 23, 42, 0.02);
+            box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.1);
         }
 
         .btn-elegant {
             background: var(--primary);
             color: white;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255,255,255,0.1);
         }
         .btn-elegant:hover {
-            background: #1e293b;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.2);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 20px 40px -10px rgba(2, 6, 23, 0.3);
+        }
+
+        .input-elegant {
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .input-elegant:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.05);
         }
 
         .custom-scrollbar::-webkit-scrollbar {
@@ -84,18 +92,8 @@
             background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #e2e8f0;
+            background: #cbd5e1;
             border-radius: 20px;
-        }
-
-        .input-elegant {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-        .input-elegant:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 1px var(--primary);
         }
 
         [contenteditable]:empty:before {
@@ -105,12 +103,11 @@
             display: block;
         }
 
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
         }
-        .animate-shake { animation: shake 0.5s ease-in-out infinite; }
+        .animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
     </style>
 
 <link rel="stylesheet" href="/index.css">
@@ -128,22 +125,10 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-CqfeeOqs.js"></script>
+  <script type="module" crossorigin src="/assets/index-CRG_7RB5.js"></script>
 </head>
-<body class="antialiased selection:bg-slate-200 selection:text-slate-900">
+<body class="antialiased selection:bg-slate-900 selection:text-white">
     <div class="aurora-bg"></div>
     <div id="root"></div>
-    <!-- Script de entrada principal do React -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(reg => {
-                    console.log('SW registered');
-                }).catch(err => {
-                    console.log('SW registration failed:', err);
-                });
-            });
-        }
-    </script>
 </body>
 </html>
